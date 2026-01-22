@@ -1,0 +1,15 @@
+.stat-title {
+  font-size: 13px;
+  color: #A3AED0;
+}
+
+.stat-value {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2B3674;
+}
+
+.active-card {
+  background: linear-gradient(135deg, #6A5AF9, #4B3CFA);
+  color: white;
+}

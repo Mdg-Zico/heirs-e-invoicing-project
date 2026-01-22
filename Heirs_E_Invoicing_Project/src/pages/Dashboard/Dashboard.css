@@ -1,0 +1,100 @@
+.dashboard-layout {
+  display: grid;
+  grid-template-columns: 290px 1fr; /* Sidebar width + rest of screen */
+  height: 100vh;
+  background-color: #F4F7FE;
+}
+
+.dashboard-main {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+}
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 33px;
+  
+}
+
+.greeting {
+  color: #8F9BBA;
+  font-size: 14px;
+  margin: 0;
+
+  font-weight: 700;
+}
+
+.dashboard-header h2 {
+  color: #2B3674;
+  font-size: 28px;
+  margin: 4px 0 0 0;
+}
+
+.search-box {
+  position: relative;
+  width: 341px;
+  height: 46px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 11px;
+  height: 11px;
+  opacity: 0.5;
+}
+
+.search-input {
+  width: 300px;
+  height: 44px;
+  padding-left: 42px; /* space for the icon */
+  padding-right: 16px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.04);
+}
+.header-text h2{
+    font-family: "DM Sans";
+    font-weight: 700;
+    size: 34px;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+}
+
+/* Generic card look */
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+/* First row (4 equal cards) */
+.stat-card {
+  grid-column: span 3; /* 12 / 4 = 3 */
+}
+
+/* Second row */
+.chart-card {
+  grid-column: span 8;
+}
+
+.profile-card {
+  grid-column: span 4;
+}
+
+/* Third row */
+.monthly-card,
+.transactions-card,
+.schedule-card {
+  grid-column: span 4;
+}
