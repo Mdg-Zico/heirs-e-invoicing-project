@@ -1,0 +1,170 @@
+.chart-card {
+  padding: 24px;
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.chart-header h3 {
+  font-size: 16px;
+  color: #2B3674;
+  margin: 0;
+}
+
+.chart-amount {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2B3674;
+}
+.profile-card {
+  text-align: center;
+  padding: 24px;
+}
+
+.profile-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 12px;
+}
+
+.profile-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #2B3674;
+  margin: 0;
+}
+
+.profile-location {
+  font-size: 12px;
+  color: #A3AED0;
+  margin-bottom: 16px;
+}
+
+.profile-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.profile-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-number {
+  font-size: 18px;
+  font-weight: 700;
+  color: #2B3674;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: #A3AED0;
+}
+.transactions-card h3 {
+  margin-bottom: 16px;
+  color: #2B3674;
+}
+
+.transactions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.transaction-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.transaction-icon {
+  font-size: 20px;
+}
+
+.transaction-title {
+  font-size: 14px;
+  margin: 0;
+}
+
+.transaction-date {
+  font-size: 12px;
+  color: #A3AED0;
+}
+
+.transaction-amount {
+  font-weight: 600;
+}
+
+.view-all {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #4B3CFA;
+  cursor: pointer;
+}
+.schedule-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+
+}
+
+.schedule-header h3 {
+  font-size: 22px;
+  color: #2B3674;
+  margin-bottom: 16px;
+}
+
+.schedule-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.schedule-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.schedule-line {
+  width: 4px;
+  height: 36px;
+  background: #5B4BFF;
+  border-radius: 2px;
+}
+
+.schedule-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2B3674;
+  margin: 0;
+}
+
+.schedule-time {
+  font-size: 12px;
+  color: #A3AED0;
+}
+
+.schedule-footer {
+  margin-top: 16px;
+  text-align: right;
+}
+
+.schedule-footer a {
+  color: #5B4BFF;
+  font-size: 13px;
+  text-decoration: none;
+}

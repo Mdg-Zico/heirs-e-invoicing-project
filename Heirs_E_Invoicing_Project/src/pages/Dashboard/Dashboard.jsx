@@ -3,6 +3,14 @@ import "./Dashboard.css"
 import Sidebar from "../../components/Sidebar/Sidebar.jsx"
 import SearchIcon from "../../components/SearchIcon/SearchIcon.svg"
 import StatCard from "../../components/DashboardCards/StatCard/StatCard.jsx";
+import { stats } from "../../services/dashboardMock.js";
+import TotalSpentChart from "../../components/DashboardCards/TotalSpentChart/TotalSpentChart.jsx"
+import ProfileCard from "../../components/DashboardCards/ProfileCard/ProfileCard.jsx";
+import MonthlySpend from "../../components/DashboardCards/MonthlySpend/MonthlySpend.jsx";
+import Transactions from "../../components/DashboardCards/Transactions/Transactions.jsx";
+import Schedule from "../../components/DashboardCards/Schedule/Schedule.jsx";
+import { scheduleData } from "../../services/scheduleDataMock.js";
+
 
 const email = localStorage.getItem("userEmail");
 const firstName = email ? email.split("@")[0].split(".")[0] : "";
@@ -31,20 +39,36 @@ function Dashboard() {
               {/* Row 1: 4 Stat Cards */}
               
 
-                <StatCard title="Spent this month" value="$682.5" />
-                <StatCard title="New clients" value="321" />
-                <StatCard title="Earnings" value="$350.40" />
-                <StatCard title="Activity" value="$540.50" highlight />
+                {stats.map((item, index) => (
+                  <StatCard
+                    key={index}
+                    title={item.title}
+                    value={item.value}
+                    iconLeft={item.iconLeft}
+                    iconRight={item.iconRight}
+                    rightIconType={item.rightIconType}
+                    highlight={item.highlight}
+                  />
+                ))}
+
+
 
 
               {/* Row 2: Chart + Profile */}
-              <div className="card chart-card">Total Spent Chart</div>
-              <div className="card profile-card">Profile</div>
+              <TotalSpentChart />
+              <ProfileCard />
 
               {/* Row 3: Monthly, Transactions, Schedule */}
-              <div className="card monthly-card">Monthly Spend</div>
-              <div className="card transactions-card">Transactions</div>
-              <div className="card schedule-card">Schedule</div>
+              <MonthlySpend />
+              <Transactions />
+              
+                <Schedule 
+                  date={scheduleData.date} 
+                  items={scheduleData.items} 
+                />
+              
+
+
           </div>
 
       </div>
@@ -57,3 +81,5 @@ function Dashboard() {
 }
 
 export default Dashboard;
+
+

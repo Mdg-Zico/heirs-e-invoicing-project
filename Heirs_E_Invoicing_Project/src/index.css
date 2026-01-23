@@ -1,5 +1,7 @@
 
-
+html, body{
+  overflow-x: hidden;
+}
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -31,6 +33,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: #F4F7FE;
 
 }
 

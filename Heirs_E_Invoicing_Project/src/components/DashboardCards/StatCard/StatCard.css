@@ -1,15 +1,80 @@
+.stat-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border-radius: 16px;
+  width: 257px;
+  height: 97px;
+  padding: 0 16px;
+  text-align: left;
+}
+
+/* LEFT ICON (same size for all main icons) */
+.stat-left img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+}
+
+/* CENTER TEXT */
+.stat-center {
+  flex: 1;
+  margin-left: 14px;
+}
+
 .stat-title {
-  font-size: 13px;
+  font-size: 14px;
   color: #A3AED0;
+  margin: 0 0 6px 0;
 }
 
 .stat-value {
   font-size: 22px;
   font-weight: 700;
   color: #2B3674;
+  margin: 0;
 }
 
+/* RIGHT ICON BASE */
+.stat-icon-right {
+  object-fit: contain;
+}
+
+
+
+/* Highlighted (Activity) card */
 .active-card {
   background: linear-gradient(135deg, #6A5AF9, #4B3CFA);
-  color: white;
+}
+
+.active-card .stat-title,
+.active-card .stat-value {
+  color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* New Clients wave */
+.stat-icon-right.clientsTrend {
+  width: 58.5px;
+  height: 28.5px;
+  opacity: 0.8;
+}
+
+/* Activity wave */
+.stat-icon-right.activityTrend {
+  width: 87.5px;
+  height: 39.5px;
+  opacity: 0.9;
 }
