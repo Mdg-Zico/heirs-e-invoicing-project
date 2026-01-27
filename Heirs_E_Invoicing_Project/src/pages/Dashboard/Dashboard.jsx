@@ -19,7 +19,7 @@ function Dashboard() {
 
   <div className="page-container dashboard-layout">
     <Sidebar/>
-      <div className="dashboard-main">
+      <div className="dashboard-main main-content">
          <div className="dashboard-header">
             <div className="header-text">
               <p className="greeting">Hi {firstName.charAt(0).toUpperCase() + firstName.slice(1)},</p>
@@ -59,7 +59,7 @@ function Dashboard() {
               <ProfileCard />
 
               {/* Row 3: Monthly, Transactions, Schedule */}
-              <MonthlySpend />
+              <MonthlySpend/>
               <Transactions />
               
                 <Schedule 

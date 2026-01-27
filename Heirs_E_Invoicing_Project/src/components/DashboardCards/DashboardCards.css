@@ -1,5 +1,6 @@
 .chart-card {
   padding: 24px;
+ 
 }
 
 .chart-header {
@@ -23,6 +24,8 @@
 .profile-card {
   text-align: center;
   padding: 24px;
+  height: 350px ;
+  
 }
 
 .profile-avatar {
@@ -68,7 +71,7 @@
   color: #A3AED0;
 }
 .transactions-card h3 {
-  margin-bottom: 16px;
+  margin: 22px 0 16px 0;
   color: #2B3674;
 }
 
@@ -108,18 +111,12 @@
   font-weight: 600;
 }
 
-.view-all {
-  margin-top: 12px;
-  font-size: 13px;
-  color: #4B3CFA;
-  cursor: pointer;
-}
+
 .schedule-card {
   background: #ffffff;
   border-radius: 16px;
-  padding: 20px;
-
 }
+
 
 .schedule-header h3 {
   font-size: 22px;
@@ -133,6 +130,12 @@
   gap: 16px;
 }
 
+.transactions-card,
+.schedule-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .schedule-item {
   display: flex;
   align-items: flex-start;
@@ -161,10 +164,27 @@
 .schedule-footer {
   margin-top: 16px;
   text-align: right;
+
+}
+.transaction-footer {
+  margin-top: 16px;
+  text-align: right;
+  margin-bottom: 0;
 }
 
-.schedule-footer a {
+.schedule-footer .transaction-footer a {
   color: #5B4BFF;
   font-size: 13px;
   text-decoration: none;
 }
+
+
+
+
+
+
+
+
+
+
+

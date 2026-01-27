@@ -1,0 +1,60 @@
+.monthly-earnings-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Header: title + icon */
+.monthly-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.monthly-title {
+  font-size: 13px;
+  color: #A3AED0;
+  margin: 0;
+}
+
+/* Top right bar icon */
+.monthly-bar-icon {
+  width: 24px;
+  height: 24px;
+  background: #F4F7FE;
+  border-radius: 10px;
+  padding: 6px;
+  
+}
+
+/* Main value */
+.monthly-value {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2B3674;
+  margin: 8px 0 4px;
+}
+
+/* Percentage pill */
+.monthly-badge {
+  font-size: 12px;
+  color: #22C55E;
+  background: #ECFDF5;
+  padding: 4px 10px;
+  border-radius: 999px;
+  width: fit-content;
+  margin-bottom: 12px;
+}
+
+/* Chart spacing */
+.recharts-responsive-container {
+  margin-top: 8px;
+}
+.waves{
+    width: fit-content;
+    margin: 0;
+}

@@ -4,8 +4,12 @@
   background: #FFFFFF;
   display: flex;
   flex-direction: column;   
+  position: sticky;
+  top: 0;
+  overflow: hidden; /* Sidebar never scrolls */
   
 }
+
 
 
 .sidebar-heading {
@@ -98,3 +102,7 @@
     margin-top: 50px;
     margin-bottom: 50px;
 }
+
+
+
+

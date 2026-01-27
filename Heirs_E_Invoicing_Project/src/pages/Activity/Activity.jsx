@@ -6,6 +6,7 @@ function Activity() {
   return (
     <div className='page-container'>
         <Sidebar/>
+        <div className='main-content'></div>
     </div>
   )
 }

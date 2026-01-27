@@ -1,9 +1,30 @@
-function MonthlySpend() {
+import { LineChart, Area, Line, ResponsiveContainer } from "recharts";
+import barIcon from "../../../assets/icons/bar_chart.svg"
+import waves from "../../../assets/icons/monthlySpendIcon.svg"
+import "../DashboardCards.css";
+import "./MonthlySpend.css"
+import { currentMonthEarnings } from "../../../services/currentMonthEarnings";
+
+function CurrentMonthEarnings() {
   return (
-    <div className="card monthly-card">
-      <h3>Monthly Spend</h3>
-    </div>
+   <div className="card monthly-card monthly-earnings-card">
+    <img src={barIcon} className="monthly-bar-icon"  />
+  <div className="monthly-header">
+    <p className="monthly-title">This month earnings</p>
+    
+  
+
+  <h3 className="monthly-value">$682.5</h3>
+  <span className="monthly-badge">+2.45%</span>
+</div>
+  <ResponsiveContainer width="100%" height={120}>
+  
+      <img src={waves}  />
+    
+  </ResponsiveContainer>
+</div>
+
   );
 }
 
-export default MonthlySpend;
+export default CurrentMonthEarnings;

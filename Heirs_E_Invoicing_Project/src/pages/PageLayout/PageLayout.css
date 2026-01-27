@@ -1,7 +1,17 @@
+
 .page-container {
-  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 290px 1fr; /* Sidebar + content */
+   min-height: 100vh;
   min-width: 100vw;
-  background: #F4F7FE;
   display: flex;
-  
+  overflow: hidden; /* Prevent whole app from scrolling */
+  background: #F4F7FE;
+}
+
+.main-content {
+  height: 100vh;
+  overflow-y: auto;   /* Only vertical scrolling */
+  overflow-x: hidden;
+  padding: 32px;
 }
