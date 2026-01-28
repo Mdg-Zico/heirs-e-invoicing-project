@@ -9,17 +9,17 @@ function CurrentMonthEarnings() {
   return (
    <div className="card monthly-card monthly-earnings-card">
     <img src={barIcon} className="monthly-bar-icon"  />
-  <div className="monthly-header">
-    <p className="monthly-title">This month earnings</p>
+        <div className="monthly-header">
+            <p className="monthly-title">This month earnings</p>
+            
+            
+
+            <h3 className="monthly-value">$682.5</h3>
+            <span className="monthly-badge">+2.45%</span>
+        </div>
     
   
-
-  <h3 className="monthly-value">$682.5</h3>
-  <span className="monthly-badge">+2.45%</span>
-</div>
-  
-  
-      <img className="svg" src={waves}  />
+    <img className="svg" src={waves}  />
     
   
 </div>

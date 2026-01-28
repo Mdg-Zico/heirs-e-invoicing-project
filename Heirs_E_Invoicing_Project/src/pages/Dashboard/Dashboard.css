@@ -1,6 +1,6 @@
 /*Dashboard Css */
 .page-container {
-  background: #ffffff;
+  
   border-radius: 16px;
   
   overflow: hidden;   /* THIS is important */
@@ -173,6 +173,33 @@
   }
 
   .search-box {
+    width: 100%;
+  }
+}
+
+
+
+
+@media (max-width: 900px) {
+    .page-container {
+    grid-template-columns: 80px 1fr;  /* collapse sidebar width */
+  }
+
+  .sidebar-container {
+    width: 80px;
+  }
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    gap: 16px;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .search-input {
     width: 100%;
   }
 }
