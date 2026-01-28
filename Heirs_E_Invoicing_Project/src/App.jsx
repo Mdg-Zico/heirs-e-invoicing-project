@@ -12,6 +12,7 @@ import Schedule from "./pages/Schedule/Schedule"
 import Payouts from "./pages/Payouts/Payouts"
 import Logout from "./pages/Logout/Logout"
 
+
 function App() {
   return (
    <Routes>
@@ -27,6 +28,8 @@ function App() {
     <Route path="/clients/:id" element={<ClientDetails />} />
     <Route path="/settings" element={<Settings />} />
     <Route path='/logout' element={<Login/>}/>
+    <Route path="/forgot-password" element={<ForgotPassword />} />
+
    </Routes>
   );
 }

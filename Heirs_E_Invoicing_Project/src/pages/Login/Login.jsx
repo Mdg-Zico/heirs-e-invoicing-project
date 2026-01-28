@@ -75,6 +75,10 @@ const handleLogin = async (e) => {
           <button type="submit" disabled={loading}>
             {loading ? "Signing in..." : "Login"}
           </button>
+          <p className="forgot" onClick={() => navigate("/forgot-password")}>
+              Forgot password?
+          </p>
+
         </form>
       </div>
     </div>

@@ -2,7 +2,7 @@
 .page-container {
   background: #ffffff;
   border-radius: 16px;
-  padding: 20px;
+  
   overflow: hidden;   /* THIS is important */
 }
 
@@ -91,6 +91,7 @@
   grid-auto-rows: minmax(100px, auto);
   column-gap: 20px;
   row-gap: 20px;
+  min-width: 0;
 }
 
 /* Generic card look */
@@ -130,7 +131,7 @@
 
 
 /* ========== TABLET ========== */
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .stat-card { 
     grid-column: span 6;   /* 2 per row */
   }
@@ -151,7 +152,7 @@
 }
 
 /* ========== MOBILE ========== */
-@media (max-width: 640px) {
+@media (max-width: 840px) {
   .dashboard-main {
     padding: 16px;
   }

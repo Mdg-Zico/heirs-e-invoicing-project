@@ -17,11 +17,11 @@ function CurrentMonthEarnings() {
   <h3 className="monthly-value">$682.5</h3>
   <span className="monthly-badge">+2.45%</span>
 </div>
-  <ResponsiveContainer width="100%" height={120}>
   
-      <img src={waves}  />
+  
+      <img className="svg" src={waves}  />
     
-  </ResponsiveContainer>
+  
 </div>
 
   );
