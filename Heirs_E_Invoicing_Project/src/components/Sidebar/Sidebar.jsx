@@ -35,7 +35,10 @@ function Sidebar(){
                     <img src={dashboardIcon} className="menu-icon" />
                     <span >Dashboard</span>
                 </NavLink>
-
+                <NavLink to="/clients" className="menu-item">
+                    <img src={activityIcon} className="menu-icon" />
+                    <span>Clients</span>
+                </NavLink>
                 <NavLink to="/activity" className="menu-item">
                     <img src={activityIcon} className="menu-icon" />
                     <span>Activity</span>

@@ -1,0 +1,44 @@
+.clients-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "DM Sans";
+}
+
+.clients-table th {
+  text-align: left;
+  font-size: 13px;
+  color: #A3AED0;
+  padding-bottom: 12px;
+}
+
+.clients-table td {
+  padding: 12px 0;
+  font-size: 14px;
+  color: #2B3674;
+  border-bottom: 1px solid #F1F3F9;
+}
+
+.status.active {
+  color: #22C55E;
+}
+
+.status.pending {
+  color: #F59E0B;
+}
+
+.status.suspended {
+  color: #EF4444;
+}
+
+.actions button {
+  margin-right: 8px;
+  background: none;
+  border: none;
+  color: #4318FF;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.actions .danger {
+  color: #EF4444;
+}
