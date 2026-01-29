@@ -12,9 +12,25 @@ import Schedule from "../../components/DashboardCards/Schedule/Schedule.jsx";
 import { scheduleData } from "../../services/scheduleDataMock.js";
 
 
+
 const email = localStorage.getItem("userEmail");
 const firstName = email ? email.split("@")[0].split(".")[0] : "";
+
+const getClientCount = () => {
+  const clients = JSON.parse(localStorage.getItem("clients")) || [];
+  return clients.length;
+};
 function Dashboard() {
+  const updatedStats = stats.map(item => {
+  if (item.title.toLowerCase() === "new clients") {
+    return {
+      ...item,
+      value: getClientCount().toString()
+    };
+  }
+  return item;
+});
+
   return (
 
   <div className="page-container dashboard-layout">
@@ -39,7 +55,7 @@ function Dashboard() {
               {/* Row 1: 4 Stat Cards */}
               
 
-                {stats.map((item, index) => (
+                {updatedStats.map((item, index) => (
                   <StatCard
                     key={index}
                     title={item.title}

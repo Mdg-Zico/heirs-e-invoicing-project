@@ -6,42 +6,72 @@ import SearchIcon from "../../components/SearchIcon/SearchIcon.svg";
 import "./Clients.css";
 import "../PageLayout/PageLayout.css";
 
-
 import { clientsMock } from "../../services/clientMock";
 import { useState, useEffect } from "react";
 
 function Clients() {
   const savedClients = JSON.parse(localStorage.getItem("clients")) || clientsMock;
+
   const [clients, setClients] = useState(savedClients);
   const [showModal, setShowModal] = useState(false);
   const [search, setSearch] = useState("");
-  const [modalMode, setModalMode] = useState("add");
-
+  const [editingClient, setEditingClient] = useState(null);
+  const [mode, setMode] = useState("add"); // add | edit | view
   const [clientToDelete, setClientToDelete] = useState(null);
 
-  const [editingClient, setEditingClient] = useState(null);
+  // Pagination
+  const [currentPage, setCurrentPage] = useState(1);
+  const clientsPerPage = 10;
+
+  // Sorting
+  // Sorting (default: newest first)
+  const [sortField, setSortField] = useState("dateOnboarded");
+  const [sortOrder, setSortOrder] = useState("desc");
+
 
   useEffect(() => {
     localStorage.setItem("clients", JSON.stringify(clients));
   }, [clients]);
 
+  // Search
   const filteredClients = clients.filter(c =>
     c.name.toLowerCase().includes(search.toLowerCase()) ||
     c.email.toLowerCase().includes(search.toLowerCase()) ||
     c.company.toLowerCase().includes(search.toLowerCase())
   );
 
-  const handleView = (client) => console.log("View:", client);
+  // Sort
+    const sortedClients = [...filteredClients].sort((a, b) => {
+    const valA = sortField === "dateOnboarded" ? new Date(a[sortField]) : a[sortField];
+    const valB = sortField === "dateOnboarded" ? new Date(b[sortField]) : b[sortField];
+
+    if (sortOrder === "asc") return valA > valB ? 1 : -1;
+    return valA < valB ? 1 : -1;
+  });
+
+
+
+  // Pagination logic
+  const indexOfLast = currentPage * clientsPerPage;
+  const indexOfFirst = indexOfLast - clientsPerPage;
+  const currentClients = sortedClients.slice(indexOfFirst, indexOfLast);
+  const totalPages = Math.ceil(sortedClients.length / clientsPerPage);
+
+  const handleView = (client) => {
+    setEditingClient(client);
+    setMode("view");
+    setShowModal(true);
+  };
 
   const handleEdit = (client) => {
     setEditingClient(client);
+    setMode("edit");
     setShowModal(true);
   };
 
   const handleDelete = (id) => {
-  setClientToDelete(id);
-};
-
+    setClientToDelete(id);
+  };
 
   return (
     <div className="page-container dashboard-layout">
@@ -68,22 +98,54 @@ function Clients() {
 
         <ClientStats clients={clients} />
 
-        <div className="add-client-row">
-          <button className="add-client-btn" onClick={() => setShowModal(true)}>
+        <div className="table-controls">
+          <div>
+            <select value={sortField} onChange={(e) => setSortField(e.target.value)}>
+              <option value="name">Sort by Name</option>
+              <option value="dateOnboarded">Sort by Date</option>
+              <option value="status">Sort by Status</option>
+            </select>
+
+            <select value={sortOrder} onChange={(e) => setSortOrder(e.target.value)}>
+              <option value="asc">Ascending</option>
+              <option value="desc">Descending</option>
+            </select>
+          </div>
+
+          <button className="add-client-btn" onClick={() => {
+            setEditingClient(null);
+            setMode("add");
+            setShowModal(true);
+          }}>
             Add Client
           </button>
         </div>
 
         <div className="clients-table-card">
           <ClientsTable
-            clients={filteredClients}
+            clients={currentClients}
             onView={handleView}
             onEdit={handleEdit}
             onDelete={handleDelete}
           />
         </div>
 
+        {/* Pagination */}
+        <div className="pagination">
+          {Array.from({ length: totalPages }, (_, i) => (
+            <button
+              key={i}
+              className={currentPage === i + 1 ? "active-page" : ""}
+              onClick={() => setCurrentPage(i + 1)}
+            >
+              {i + 1}
+            </button>
+          ))}
+        </div>
+
+        {/* Add / Edit / View Modal */}
         <ClientModal
+          mode={mode}
           isOpen={showModal}
           client={editingClient}
           onClose={() => {
@@ -91,13 +153,13 @@ function Clients() {
             setEditingClient(null);
           }}
           onSave={(clientData) => {
-            if (editingClient) {
+            if (mode === "edit") {
               setClients(prev =>
                 prev.map(c =>
                   c.id === editingClient.id ? { ...clientData, id: c.id } : c
                 )
               );
-            } else {
+            } else if (mode === "add") {
               setClients(prev => [
                 ...prev,
                 {
@@ -106,39 +168,36 @@ function Clients() {
                   dateOnboarded: new Date().toISOString().split("T")[0]
                 }
               ]);
-
             }
             setShowModal(false);
             setEditingClient(null);
           }}
         />
-        {clientToDelete && (
-        <div className="modal-overlay">
-          <div className="client-modal">
-            <h3>Delete Client</h3>
-            <p>Are you sure you want to delete this client? This action cannot be undone.</p>
 
-            <div className="modal-actions">
-              <button
-                className="cancel-btn"
-                onClick={() => setClientToDelete(null)}
-              >
-                Cancel
-              </button>
-              <button
-                className="danger-btn"
-                onClick={() => {
-                  setClients(prev => prev.filter(c => c.id !== clientToDelete));
-                  setClientToDelete(null);
-                }}
-              >
-                Delete
-              </button>
+        {/* Delete Confirmation */}
+        {clientToDelete && (
+          <div className="modal-overlay">
+            <div className="client-modal">
+              <h3>Delete Client</h3>
+              <p>This action cannot be undone.</p>
+
+              <div className="modal-actions">
+                <button className="cancel-btn" onClick={() => setClientToDelete(null)}>
+                  Cancel
+                </button>
+                <button
+                  className="danger-btn"
+                  onClick={() => {
+                    setClients(prev => prev.filter(c => c.id !== clientToDelete));
+                    setClientToDelete(null);
+                  }}
+                >
+                  Delete
+                </button>
+              </div>
             </div>
           </div>
-  </div>
-)}
-
+        )}
       </div>
     </div>
   );

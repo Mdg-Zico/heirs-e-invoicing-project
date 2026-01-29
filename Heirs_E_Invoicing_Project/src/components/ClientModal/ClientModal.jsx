@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./ClientModal.css";
 
-function ClientModal({ isOpen, onClose, onSave, client }) {
+function ClientModal({ isOpen, onClose, onSave, client, mode }) {
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -11,7 +11,7 @@ function ClientModal({ isOpen, onClose, onSave, client }) {
 
   useEffect(() => {
     if (client) {
-      setForm(client); // Prefill when editing
+      setForm(client);
     } else {
       setForm({ name: "", email: "", company: "", status: "Active" });
     }
@@ -22,13 +22,18 @@ function ClientModal({ isOpen, onClose, onSave, client }) {
   return (
     <div className="modal-overlay">
       <div className="client-modal">
-        <h3>{client ? "Edit Client" : "Add New Client"}</h3>
+        <h3>
+          {mode === "view" && "View Client"}
+          {mode === "edit" && "Edit Client"}
+          {mode === "add" && "Add New Client"}
+        </h3>
 
         <form onSubmit={(e) => {
           e.preventDefault();
-          onSave(form);
+          if (mode !== "view") onSave(form);
         }}>
           <input
+            disabled={mode === "view"}
             type="text"
             placeholder="Full Name"
             value={form.name}
@@ -37,6 +42,7 @@ function ClientModal({ isOpen, onClose, onSave, client }) {
           />
 
           <input
+            disabled={mode === "view"}
             type="email"
             placeholder="Email"
             value={form.email}
@@ -45,6 +51,7 @@ function ClientModal({ isOpen, onClose, onSave, client }) {
           />
 
           <input
+            disabled={mode === "view"}
             type="text"
             placeholder="Company"
             value={form.company}
@@ -53,6 +60,7 @@ function ClientModal({ isOpen, onClose, onSave, client }) {
           />
 
           <select
+            disabled={mode === "view"}
             value={form.status}
             onChange={(e) => setForm({ ...form, status: e.target.value })}
           >
@@ -63,11 +71,14 @@ function ClientModal({ isOpen, onClose, onSave, client }) {
 
           <div className="modal-actions">
             <button type="button" className="cancel-btn" onClick={onClose}>
-              Cancel
+              Close
             </button>
-            <button type="submit">
-              {client ? "Update" : "Save"}
-            </button>
+
+            {mode !== "view" && (
+              <button type="submit">
+                {mode === "edit" ? "Update" : "Save"}
+              </button>
+            )}
           </div>
         </form>
       </div>

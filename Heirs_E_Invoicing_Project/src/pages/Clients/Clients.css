@@ -2,10 +2,9 @@
   padding: 32px;
   display: flex;
   flex-direction: column;
-  flex: 1;          /* fill remaining space after sidebar */
-  min-width: 0;    /* prevent overflow pushing sidebar */
-  
- 
+  flex: 1;
+  min-width: 0;
+  background: #F4F7FE;
 }
 
 /* Header row */
@@ -23,30 +22,19 @@
   margin: 0;
 }
 
-.add-client-btn {
-  background: #4318FF;
-  color: white;
-  border: none;
-  padding: 10px 16px;
-  border-radius: 8px;
-  cursor: pointer;
+.clients-subtitle {
+  color: #8F9BBA;
   font-size: 14px;
+  margin-top: 4px;
 }
-.add-client-row {
+
+.clients-actions {
+  position: relative;
   display: flex;
-  justify-content: flex-end;
-  margin: 12px 0 16px 0;
+  align-items: center;
 }
 
-/* Table container */
-
-.clients-table-card {
-  background: white;
-  border-radius: 16px;
-  padding: 20px;
-  min-height: calc(100vh - 180px); /* fill screen under header */
-}
-.clients-search{
+.clients-search {
   height: 44px;
   padding-left: 42px;
   padding-right: 16px;
@@ -55,13 +43,96 @@
   outline: none;
   background: #FFFFFF;
   box-shadow: 0px 4px 12px rgba(0,0,0,0.04);
+  font-size: 14px;
+  width: 260px;
 }
+
 .search-icon {
   position: absolute;
   left: 14px;
   top: 50%;
   transform: translateY(-50%);
-  width: 11px;
-  height: 11px;
+  width: 12px;
+  height: 12px;
   opacity: 0.5;
+}
+
+/* Stats row */
+.client-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+/* Sort + Add row */
+.table-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px 0 16px 0;
+}
+
+.table-controls select {
+  height: 36px;
+  padding: 0 12px;
+  border-radius: 8px;
+  border: 1px solid #E5E7EB;
+  background: #fff;
+  font-size: 14px;
+  outline: none;
+  margin-right: 8px;
+}
+
+/* Add client button */
+.add-client-btn {
+  background: #4318FF;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.add-client-btn:hover {
+  opacity: 0.9;
+}
+
+/* Table card */
+.clients-table-card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  min-height: calc(100vh - 260px);
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.pagination button {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #E5E7EB;
+  background: white;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.pagination button.active-page {
+  background: #4318FF;
+  color: white;
+  border-color: #4318FF;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }

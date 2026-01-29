@@ -1,9 +1,9 @@
-import {Routes, Route} from "react-router-dom"
+import {Routes, Route, Navigate} from "react-router-dom"
 import Login from "./pages/Login/Login"
 import ForgotPassword from "./pages/ForgotPassword/ForgotPassword"
 import Dashboard from "./pages/Dashboard/Dashboard"
 import Clients from "./pages/Clients/Clients"
-import ClientDetails from "./pages/ClientDetails/ClientDetails"
+import ProtectedRoute from "../src/Routes/ProtectedRoute"
 import Settings from "./pages/Settings/Settings"
 import Activity from "./pages/Activity/Activity"
 import Library from "./pages/Library/Library"
@@ -15,22 +15,61 @@ import Logout from "./pages/Logout/Logout"
 
 function App() {
   return (
-   <Routes>
-    <Route path='/' element={<Login/>}/>
-    <Route path="/activity" element={<Activity/>}/>
-    <Route path="/library" element={<Library/>}/>
-    <Route path="/security" element={<Security/>}/>
-    <Route path="/schedules" element={<Schedule/>}/>
-    <Route path="/payouts" element={<Payouts/>}/>
-    <Route path='/forgot-password' element={<ForgotPassword/>}/>
-    <Route path="/dashboard" element={<Dashboard />} />
-    <Route path="/clients" element={<Clients />} />
-    <Route path="/clients/:id" element={<ClientDetails />} />
-    <Route path="/settings" element={<Settings />} />
-    <Route path='/logout' element={<Login/>}/>
-    <Route path="/forgot-password" element={<ForgotPassword />} />
+  <Routes>
+      <Route path="/" element={<Navigate to="/login" />} />
+      <Route path="/login" element={<Login />} />
+      <Route path='/forgot-password' element={<ForgotPassword/>}/>
 
-   </Routes>
+      <Route path="/dashboard" element={
+        <ProtectedRoute>
+          <Dashboard />
+        </ProtectedRoute>
+      } />
+
+      <Route path="/clients" element={
+        <ProtectedRoute>
+          <Clients />
+        </ProtectedRoute>
+      } />
+
+      <Route path="/activity" element={
+        <ProtectedRoute>
+          <Activity />
+        </ProtectedRoute>
+      } />
+
+      <Route path="/library" element={
+        <ProtectedRoute>
+          <Library />
+        </ProtectedRoute>
+      } />
+
+      <Route path="/security" element={
+        <ProtectedRoute>
+          <Security />
+        </ProtectedRoute>
+      } />
+
+      <Route path="/schedules" element={
+        <ProtectedRoute>
+          <Schedule />
+        </ProtectedRoute>
+      } />
+
+      <Route path="/payouts" element={
+        <ProtectedRoute>
+          <Payouts />
+        </ProtectedRoute>
+      } />
+
+      <Route path="/settings" element={
+        <ProtectedRoute>
+          <Settings />
+        </ProtectedRoute>
+      } />
+
+      <Route path='/logout' element={<Logout/>}/>
+</Routes>
   );
 }
 

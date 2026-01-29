@@ -1,0 +1,71 @@
+.settings-tab {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.settings-tab h3 {
+  font-size: 18px;
+  color: #2B3674;
+  margin-bottom: 4px;
+}
+
+.tab-description {
+  font-size: 13px;
+  color: #A3AED0;
+  margin-bottom: 20px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 12px;
+  color: #2B3674;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select {
+  height: 44px;
+  border-radius: 10px;
+  border: 1px solid #E5E7EB;
+  padding: 0 12px;
+  font-size: 14px;
+  outline: none;
+  font-family: "DM Sans";
+}
+
+.form-group input:disabled {
+  background: #F4F7FE;
+  color: #A3AED0;
+}
+
+.tab-actions {
+  margin-top: 24px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.primary-btn {
+  background: #4318FF;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.primary-btn:hover {
+  background: #3b16e0;
+}
