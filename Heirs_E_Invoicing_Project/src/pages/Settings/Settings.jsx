@@ -24,21 +24,21 @@ function Settings() {
           {/* Tabs */}
           <div className="settings-tabs">
             <button
-              className={activeTab === "profile" ? "tab active" : "tab"}
+              className={`tab ${activeTab === "profile" ? "active" : ""}`}
               onClick={() => setActiveTab("profile")}
             >
               Profile
             </button>
 
             <button
-              className={activeTab === "security" ? "tab active" : "tab"}
+              className={`tab ${activeTab === "security" ? "active" : ""}`}
               onClick={() => setActiveTab("security")}
             >
               Security
             </button>
 
             <button
-              className={activeTab === "preferences" ? "tab active" : "tab"}
+              className={`tab ${activeTab === "preferences" ? "active" : ""}`}
               onClick={() => setActiveTab("preferences")}
             >
               Preferences

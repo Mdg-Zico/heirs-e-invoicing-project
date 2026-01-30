@@ -4,6 +4,22 @@ html, body {
   overflow-x: hidden;
   ::-webkit-scrollbar { display: none; }
 }
+/* Remove focus styles globally */
+button:focus,
+button:focus-visible,
+a:focus,
+a:focus-visible,
+select:focus,
+select:focus-visible,
+input:focus,
+input:focus-visible,
+textarea:focus,
+textarea:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;

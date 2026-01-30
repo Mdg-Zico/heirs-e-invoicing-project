@@ -66,23 +66,34 @@
 }
 
 /* Sort + Add row */
+.table-controls select {
+  height: 44px;
+  padding: 0 16px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.04);
+  font-family: "DM Sans";
+  font-size: 14px;
+  color: #2B3674;
+  cursor: pointer;
+  gap: 100px;
+}
+.sort-group {
+  display: flex;
+  gap: 12px;
+}
+
+/* Optional: space between them */
 .table-controls {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 12px 0 16px 0;
+  margin-bottom: 16px;
 }
 
-.table-controls select {
-  height: 36px;
-  padding: 0 12px;
-  border-radius: 8px;
-  border: 1px solid #E5E7EB;
-  background: #fff;
-  font-size: 14px;
-  outline: none;
-  margin-right: 8px;
-}
+
 
 /* Add client button */
 .add-client-btn {
@@ -106,7 +117,11 @@
   background: white;
   border-radius: 16px;
   padding: 20px;
-  min-height: calc(100vh - 260px);
+}
+.clients-table{
+  margin: 0 auto;   /* centers the table */
+  width: 100%;
+  max-width: 1100px; /* optional, gives nice centered look */
 }
 
 /* Pagination */

@@ -42,3 +42,50 @@
 .actions .danger {
   color: #EF4444;
 }
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.clients-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.clients-table th,
+.clients-table td {
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .clients-table {
+    min-width: 720px; /
+  }
+}
+
+
+.clients-table th,
+.clients-table td {
+  padding: 12px 12px;
+  white-space: nowrap;
+}
+
+/* Column widths for mobile readability */
+.clients-table th:nth-child(1),
+.clients-table td:nth-child(1) { min-width: 160px; } /* Name */
+
+.clients-table th:nth-child(2),
+.clients-table td:nth-child(2) { min-width: 220px; } /* Email */
+
+.clients-table th:nth-child(3),
+.clients-table td:nth-child(3) { min-width: 200px; } /* Company */
+
+.clients-table th:nth-child(4),
+.clients-table td:nth-child(4) { min-width: 120px; } /* Status */
+
+.clients-table th:nth-child(5),
+.clients-table td:nth-child(5) { min-width: 150px; } /* Date */
+
+.clients-table th:nth-child(6),
+.clients-table td:nth-child(6) { min-width: 140px; } /* Actions */

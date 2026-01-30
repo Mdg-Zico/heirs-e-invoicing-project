@@ -3,6 +3,11 @@
   border-radius: 16px;
   padding: 24px;
 }
+.tab:focus,
+.tab:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
 
 .settings-tab h3 {
   font-size: 18px;
@@ -60,12 +65,29 @@
   background: #4318FF;
   color: white;
   border: none;
-  border-radius: 10px;
-  padding: 10px 20px;
+  border-radius: 12px;
+  padding: 12px 20px;
   font-size: 14px;
+  font-weight: 600;
   cursor: pointer;
+  margin-top: 20px;
+
 }
 
 .primary-btn:hover {
   background: #3b16e0;
+}
+
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr; /* stack fields vertically */
+  }
+
+  .tab-actions {
+    justify-content: center; /* center Save button on mobile */
+  }
+
+  .primary-btn {
+    width: 100%; /* full-width button like modern apps */
+  }
 }

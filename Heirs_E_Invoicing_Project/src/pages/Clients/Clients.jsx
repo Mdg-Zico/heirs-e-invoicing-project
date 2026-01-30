@@ -21,7 +21,7 @@ function Clients() {
 
   // Pagination
   const [currentPage, setCurrentPage] = useState(1);
-  const clientsPerPage = 10;
+  const clientsPerPage = 2;
 
   // Sorting
   // Sorting (default: newest first)
@@ -99,7 +99,7 @@ function Clients() {
         <ClientStats clients={clients} />
 
         <div className="table-controls">
-          <div>
+          <div className="sort-group">
             <select value={sortField} onChange={(e) => setSortField(e.target.value)}>
               <option value="name">Sort by Name</option>
               <option value="dateOnboarded">Sort by Date</option>
@@ -122,12 +122,13 @@ function Clients() {
         </div>
 
         <div className="clients-table-card">
-          <ClientsTable
+            <ClientsTable
             clients={currentClients}
             onView={handleView}
             onEdit={handleEdit}
             onDelete={handleDelete}
           />
+
         </div>
 
         {/* Pagination */}

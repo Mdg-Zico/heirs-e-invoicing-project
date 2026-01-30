@@ -1,9 +1,8 @@
-import { LineChart, Area, Line, ResponsiveContainer } from "recharts";
 import barIcon from "../../../assets/icons/bar_chart.svg"
 import waves from "../../../assets/icons/monthlySpendIcon.svg"
 import "../DashboardCards.css";
 import "./MonthlySpend.css"
-import { currentMonthEarnings } from "../../../services/currentMonthEarnings";
+
 
 function CurrentMonthEarnings() {
   return (
