@@ -1,3 +1,31 @@
+
+/* === FORCE BRAND COLOR FOR ALL TOASTS === */
+.Toastify__toast {
+  font-family: "DM Sans", sans-serif;
+  border-radius: 12px;
+}
+
+/* Remove default success green */
+.Toastify__toast--success {
+  background: #4318FF !important;
+  color: #ffffff !important;
+}
+
+/* Icon color */
+.Toastify__toast--success svg {
+  fill: #ffffff !important;
+}
+
+/* Progress bar */
+.Toastify__toast--success .Toastify__progress-bar {
+  background: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Close (X) button */
+.Toastify__close-button {
+  color: #ffffff !important;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;

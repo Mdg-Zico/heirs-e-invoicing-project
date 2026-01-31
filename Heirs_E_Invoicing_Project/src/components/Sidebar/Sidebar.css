@@ -86,7 +86,9 @@
   color:  #F4F7FE;              /* purple text */
   
 }
-
+.dash{
+    color: #A3AED0;
+}
 .menu-icon{
     width: 24px;
     height: 24px;

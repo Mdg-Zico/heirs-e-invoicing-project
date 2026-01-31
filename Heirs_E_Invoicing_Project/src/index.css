@@ -1,3 +1,8 @@
+:root {
+  --toastify-color-success: #4318FF;
+  --toastify-icon-color-success: #4318FF;
+  --toastify-color-progress-success: #4318FF;
+}
 html, body {
   margin: 0;
   padding: 0;

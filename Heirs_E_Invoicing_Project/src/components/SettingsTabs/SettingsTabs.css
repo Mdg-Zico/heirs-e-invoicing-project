@@ -1,42 +1,47 @@
+/* ============================= */
+/* Base Tab Layout */
+/* ============================= */
+
 .settings-tab {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: "DM Sans";
   background: #ffffff;
   border-radius: 16px;
   padding: 24px;
 }
-.tab:focus,
-.tab:focus-visible {
-  outline: none;
-  box-shadow: none;
+.preferences-tab {
+  padding: 16px 0;   /* flatter look */
 }
 
 .settings-tab h3 {
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: 700;
   color: #2B3674;
-  margin-bottom: 4px;
+  margin: 0;
 }
 
 .tab-description {
-  font-size: 13px;
+  font-size: 14px;
   color: #A3AED0;
-  margin-bottom: 20px;
+  margin-top: -8px;
 }
 
-.form-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
+/* ============================= */
+/* SECURITY TAB (forms) */
+/* ============================= */
 
 .form-group {
   display: flex;
   flex-direction: column;
+  gap: 6px;
 }
 
 .form-group label {
   font-size: 12px;
-  color: #2B3674;
-  margin-bottom: 6px;
   font-weight: 600;
+  color: #2B3674;
 }
 
 .form-group input,
@@ -46,7 +51,6 @@
   border: 1px solid #E5E7EB;
   padding: 0 12px;
   font-size: 14px;
-  outline: none;
   font-family: "DM Sans";
 }
 
@@ -54,40 +58,93 @@
   background: #F4F7FE;
   color: #A3AED0;
 }
+.form-group input{
+    margin-bottom: 20px;
+}
+/* ============================= */
+/* PREFERENCES TAB */
+/* ============================= */
+
+.preferences-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: #F9FAFF;
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.preferences-section h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #2B3674;
+  margin: 0;
+}
+
+.pref-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  font-size: 14px;
+  color: #2B3674;
+}
+
+.pref-item select {
+  min-width: 160px;
+  height: 40px;
+  padding: 0 12px;
+  border-radius: 8px;
+  border: 1px solid #E5E7EB;
+  background: #ffffff;
+  font-family: "DM Sans";
+  font-size: 14px;
+}
+
+/* ============================= */
+/* Actions */
+/* ============================= */
 
 .tab-actions {
-  margin-top: 24px;
   display: flex;
   justify-content: flex-end;
+  margin-top: 8px;
 }
 
 .primary-btn {
   background: #4318FF;
-  color: white;
+  color: #ffffff;
   border: none;
-  border-radius: 12px;
+  border-radius: 10px;
   padding: 12px 20px;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
-  margin-top: 20px;
-
 }
 
 .primary-btn:hover {
-  background: #3b16e0;
+  opacity: 0.9;
 }
 
-@media (max-width: 768px) {
-  .form-grid {
-    grid-template-columns: 1fr; /* stack fields vertically */
+/* ============================= */
+/* Mobile */
+/* ============================= */
+
+@media (max-width: 600px) {
+  .pref-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .pref-item select {
+    width: 100%;
   }
 
   .tab-actions {
-    justify-content: center; /* center Save button on mobile */
+    justify-content: stretch;
   }
 
   .primary-btn {
-    width: 100%; /* full-width button like modern apps */
+    width: 100%;
   }
 }

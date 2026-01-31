@@ -10,6 +10,7 @@ import schedulesIcon from "./icons/schedules.svg";
 import payoutsIcon from "./icons/payouts.svg";
 import settingsIcon from "./icons/settings.svg";
 import logoutIcon from "./icons/Logout.svg"
+import clientIcon from "./icons/clientIcon.svg"
 
 function Sidebar(){
 
@@ -33,10 +34,10 @@ function Sidebar(){
 
                 <NavLink to="/dashboard" className="menu-item dash-background">
                     <img src={dashboardIcon} className="menu-icon" />
-                    <span >Dashboard</span>
+                    <span className="dash">Dashboard</span>
                 </NavLink>
                 <NavLink to="/clients" className="menu-item">
-                    <img src={activityIcon} className="menu-icon" />
+                    <img src={clientIcon} className="menu-icon" />
                     <span>Clients</span>
                 </NavLink>
                 <NavLink to="/activity" className="menu-item">
