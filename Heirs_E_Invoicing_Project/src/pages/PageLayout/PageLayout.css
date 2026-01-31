@@ -1,17 +1,17 @@
 
 .page-container {
   display: grid;
-  grid-template-columns: 290px 1fr; /* Sidebar + content */
+  grid-template-columns: 290px 1fr; 
    min-height: 100vh;
   min-width: 100vw;
   display: flex;
-  overflow: hidden; /* Prevent whole app from scrolling */
+  overflow: hidden; 
   background: #F4F7FE;
 }
 
 .main-content {
   height: 100vh;
-  overflow-y: auto;   /* Only vertical scrolling */
+  overflow-y: auto;  
   overflow-x: hidden;
   padding: 32px;
 }

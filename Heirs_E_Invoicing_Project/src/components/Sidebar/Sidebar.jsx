@@ -1,6 +1,6 @@
 
 import "./Sidebar.css"
-import Icon from "./Icon.svg"
+import Icon from "./icons/Icon.svg"
 import { NavLink } from "react-router-dom";
 import dashboardIcon from "./icons/dashboard.svg";
 import activityIcon from "./icons/activity.svg";
@@ -22,8 +22,8 @@ function Sidebar(){
                     <img className="icon" src={Icon} alt="Not available" />
                 </div>
                 <div className="heading-texts">
-                    <p className="venus-text">HEIRS</p>
-                    <span className="dashboard-text">E-INVOICING</span>
+                    <p className="heirs-text">HEIRS</p>
+                    <span className="invoicing-text">E-INVOICING</span>
                 </div>
             </div> 
     

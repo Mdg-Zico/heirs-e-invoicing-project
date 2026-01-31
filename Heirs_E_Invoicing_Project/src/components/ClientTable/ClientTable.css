@@ -71,7 +71,7 @@
   white-space: nowrap;
 }
 
-/* Column widths for mobile readability */
+/* Column widths for mobile responsiveness */
 .clients-table th:nth-child(1),
 .clients-table td:nth-child(1) { min-width: 160px; } /* Name */
 
@@ -85,7 +85,7 @@
 .clients-table td:nth-child(4) { min-width: 120px; } /* Status */
 
 .clients-table th:nth-child(5),
-.clients-table td:nth-child(5) { min-width: 150px; } /* Date */
+.clients-table td:nth-child(5) { min-width: 150px; } /* Date Onboarded*/
 
 .clients-table th:nth-child(6),
 .clients-table td:nth-child(6) { min-width: 140px; } /* Actions */

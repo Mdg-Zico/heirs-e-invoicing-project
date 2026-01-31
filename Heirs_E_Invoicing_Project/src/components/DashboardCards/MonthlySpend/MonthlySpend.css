@@ -8,7 +8,7 @@
   gap: 18px;
 }
 
-/* Floating icon (top-right) */
+
 .monthly-bar-icon {
   position: absolute;
   top: 20px;
@@ -20,14 +20,14 @@
   padding: 6px;
 }
 
-/* Header */
+
 .monthly-header {
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
 
-/* Title + percentage row */
+
 .monthly-top-row {
   display: flex;
   justify-content: space-between;
@@ -46,7 +46,7 @@
   font-weight: 600;
 }
 
-/* Amount */
+
 .monthly-value {
   font-size: 34px;
   font-weight: 700;
@@ -54,7 +54,7 @@
   margin: 0;
 }
 
-/* Status */
+
 .monthly-status {
   display: flex;
   align-items: center;
@@ -76,7 +76,7 @@
   justify-content: center;
 }
 
-/* Chart */
+
 .monthly-chart {
   width: 100%;
   height: auto;

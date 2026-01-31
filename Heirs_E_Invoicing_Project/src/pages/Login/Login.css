@@ -1,4 +1,4 @@
-/* Page wrapper */
+
 .login-container {
   min-height: 100vh;
   background: #F4F7FE;
@@ -6,13 +6,13 @@
   align-items: center;
   justify-content: center;
   font-family: "DM Sans", sans-serif;
-   position: fixed;
-  inset: 0;                 /* top:0 right:0 bottom:0 left:0 */
+  position: fixed;
+  inset: 0;                 
   z-index: 9999;
 }
 
 
-/* Card */
+
 .login-card {
   background: #ffffff;
   width: 360px;
@@ -21,7 +21,7 @@
   box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.06);
 }
 
-/* Heading */
+
 .login-card h2 {
   font-size: 22px;
   color: #2B3674;
@@ -30,7 +30,7 @@
   text-align: center;
 }
 
-/* Subtitle */
+
 .login-card p.subtitle {
   font-size: 14px;
   color: #8F9BBA;
@@ -38,14 +38,14 @@
   margin-bottom: 24px;
 }
 
-/* Form */
+
 .login-card form {
   display: flex;
   flex-direction: column;
   gap: 14px;
 }
 
-/* Inputs */
+
 .login-card input {
   height: 44px;
   padding: 0 14px;
@@ -61,7 +61,6 @@
   box-shadow: 0 0 0 2px rgba(67, 24, 255, 0.1);
 }
 
-/* Button */
 .login-card button {
   height: 44px;
   background: #4318FF;
@@ -83,7 +82,7 @@
   cursor: not-allowed;
 }
 
-/* Forgot password */
+
 .forgot {
   margin-top: 10px;
   text-align: center;
@@ -96,7 +95,7 @@
   text-decoration: underline;
 }
 
-/* Feedback */
+
 .success-text {
   font-size: 13px;
   color: #22C55E;
@@ -110,13 +109,14 @@
   text-align: center;
 }
 
-/* Placeholder */
+
 ::placeholder {
   color: #A3AED0;
   font-family: "DM Sans";
 }
 
-/* 🔹 Mobile fine-tuning */
+
+
 @media (max-width: 480px) {
   .login-card {
     padding: 28px 20px;

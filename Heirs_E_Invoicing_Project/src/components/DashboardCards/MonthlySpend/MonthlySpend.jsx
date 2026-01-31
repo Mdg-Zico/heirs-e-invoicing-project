@@ -6,7 +6,6 @@ function MonthlySpend() {
   return (
     <div className=" card monthly-card monthly-earnings-card monthly-spend-card">
 
-      {/* Header content */}
       <div className="monthly-header">
         <div className="monthly-top-row">
           <p className="monthly-title">Spent this month</p>
@@ -21,7 +20,7 @@ function MonthlySpend() {
         </div>
       </div>
 
-      {/* Chart */}
+   
       <img src={bar} alt="" className="monthly-chart" />
 
     </div>

@@ -2,7 +2,7 @@ import Sidebar from "../../components/Sidebar/Sidebar";
 import ClientModal from "../../components/ClientModal/ClientModal";
 import ClientsTable from "../../components/ClientTable/ClientTable";
 import ClientStats from "../../components/ClientStats/ClientStats";
-import SearchIcon from "../../components/SearchIcon/SearchIcon.svg";
+import SearchIcon from "../../assets/icons/SearchIcon.svg";
 import "./Clients.css";
 import "../PageLayout/PageLayout.css";
 

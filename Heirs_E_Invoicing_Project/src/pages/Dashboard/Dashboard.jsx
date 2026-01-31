@@ -1,7 +1,7 @@
 import "../PageLayout/PageLayout.css"
 import "./Dashboard.css"
 import Sidebar from "../../components/Sidebar/Sidebar.jsx"
-import SearchIcon from "../../components/SearchIcon/SearchIcon.svg"
+import SearchIcon from "../../assets/icons/SearchIcon.svg"
 import StatCard from "../../components/DashboardCards/StatCard/StatCard.jsx";
 import { stats } from "../../services/dashboardMock.js";
 import TotalSpentChart from "../../components/DashboardCards/TotalSpentChart/TotalSpentChart.jsx"
@@ -52,7 +52,7 @@ function Dashboard() {
             </div>
          </div>
           <div className="dashboard-grid">
-              {/* Row 1: 4 Stat Cards */}
+            
               
 
                 {updatedStats.map((item, index) => (
@@ -67,14 +67,8 @@ function Dashboard() {
                   />
                 ))}
 
-
-
-
-              {/* Row 2: Chart + Profile */}
               <TotalSpentChart />
               <ProfileCard />
-
-              {/* Row 3: Monthly, Transactions, Schedule */}
               <MonthlySpend/>
               <Transactions />
               

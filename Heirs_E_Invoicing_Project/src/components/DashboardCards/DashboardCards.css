@@ -151,10 +151,6 @@
   font-weight: 500;
 }
 
-/* .transaction-amount {
-  font-weight: 600;
-} */
-
 
 .schedule-card {
   background: #ffffff;
@@ -234,9 +230,9 @@
 @media (max-width: 400px){
     .profile-stats{
         margin-left: 40px;
-         gap: 10px;              /* replaces margins */
+        gap: 10px;              
         flex-wrap: wrap;  
-         min-width: 70px;   
+        min-width: 70px;   
     }
     .profile-location{
         flex-wrap: wrap;

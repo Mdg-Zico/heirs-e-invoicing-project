@@ -10,17 +10,14 @@ import Security from "./pages/Security/Security";
 import Schedule from "./pages/Schedule/Schedule";
 import Payouts from "./pages/Payouts/Payouts";
 import Logout from "./pages/Logout/Logout";
-
 import ProtectedRoute from "./Routes/ProtectedRoute";
 import InactivityHandler from "./components/InactivityHolder/InactivityHolder"
-
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
     <>
-      {/* 🔔 Toasts */}
       <ToastContainer
         position="bottom-right"
         autoClose={3000}
@@ -31,12 +28,12 @@ function App() {
       />
 
       <Routes>
-        {/* Public routes */}
+       
         <Route path="/" element={<Navigate to="/login" />} />
         <Route path="/login" element={<Login />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
 
-        {/* 🔐 Protected + Inactivity handled routes */}
+    
         <Route
           element={
             <ProtectedRoute>
@@ -56,7 +53,7 @@ function App() {
           <Route path="/settings" element={<Settings />} />
         </Route>
 
-        {/* Logout */}
+       
         <Route path="/logout" element={<Logout />} />
       </Routes>
     </>

@@ -6,7 +6,7 @@
   flex-direction: column;   
   position: sticky;
   top: 0;
-  overflow: hidden; /* Sidebar never scrolls */
+  overflow: hidden; 
   
 }
 
@@ -29,7 +29,7 @@
   margin: 0;              
 }
 
-.venus-text {
+.heirs-text {
   font-family: "Poppins";
   font-weight: 700;
   font-size: 26px;        
@@ -38,7 +38,7 @@
   color: #4318FF;
 }
 
-.dashboard-text {
+.invoicing-text {
   font-family: "Poppins";
   font-weight: 500;
   font-size: 12px;
@@ -55,9 +55,9 @@
 }
 .sidebar-list {
   display: flex;
-  flex-direction: column;   /* stack items top to bottom */
-  margin-top: 24px;         /* space after the divider */
-  gap: 8px;                 /* space between each menu item */
+  flex-direction: column;   
+  margin-top: 24px;         
+  gap: 8px;                
   height: 405px;
   margin: 0 38px;
 
@@ -65,11 +65,11 @@
 
 .menu-item {
   display: flex;
-  align-items: center;     /* icon and text aligned vertically */
-  gap: 12px;               /* space between icon and text */
+  align-items: center;     
+  gap: 12px;               
   padding: 10px 20px;
   text-decoration: none;
-  color: #6B7280;          /* grey text like Figma */
+  color: #6B7280;          
   border-radius: 8px;
   font-size: 14px;
   margin: 0 38px;
@@ -82,8 +82,8 @@
 }
 
 .menu-item.active {
-  background-color: #4318FF;   /* active page highlight */
-  color:  #F4F7FE;              /* purple text */
+  background-color: #4318FF;   
+  color:  #F4F7FE;              
   
 }
 .dash{
@@ -114,12 +114,12 @@
     width: 90px;
   }
 
-  /* Hide text labels */
+
   .heading-texts{
     display: none;
   }
 
-  /* Center icons */
+
   .menu-item {
     justify-content: center;
     padding: 12px 0;

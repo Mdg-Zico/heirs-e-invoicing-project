@@ -7,7 +7,7 @@
   background: #F4F7FE;
 }
 
-/* Header row */
+
 .clients-header {
   display: flex;
   justify-content: space-between;
@@ -57,7 +57,7 @@
   opacity: 0.5;
 }
 
-/* Stats row */
+
 .client-stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -65,7 +65,7 @@
   margin-bottom: 20px;
 }
 
-/* Sort + Add row */
+
 .table-controls select {
   height: 44px;
   padding: 0 16px;
@@ -85,7 +85,7 @@
   gap: 12px;
 }
 
-/* Optional: space between them */
+
 .table-controls {
   display: flex;
   justify-content: space-between;
@@ -94,8 +94,6 @@
 }
 
 
-
-/* Add client button */
 .add-client-btn {
   background: #4318FF;
   color: white;
@@ -112,19 +110,19 @@
   opacity: 0.9;
 }
 
-/* Table card */
+
 .clients-table-card {
   background: white;
   border-radius: 16px;
   padding: 20px;
 }
 .clients-table{
-  margin: 0 auto;   /* centers the table */
+  margin: 0 auto; 
   width: 100%;
-  max-width: 1100px; /* optional, gives nice centered look */
+  max-width: 1100px; 
 }
 
-/* Pagination */
+
 .pagination {
   display: flex;
   justify-content: flex-end;
@@ -151,8 +149,6 @@
   opacity: 0.5;
   cursor: not-allowed;
 }
-
-
 @media (max-width: 600px) {
   .clients-header {
     flex-direction: column;
@@ -177,16 +173,16 @@
 
   .sort-group {
     width: 100%;
-    flex-wrap: wrap;
-  }
-
-  .sort-group select {
-    flex: 1;
-    min-width: 140px;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 8px;
   }
 
   .add-client-btn {
     width: 100%;
-    text-align: center;
+  }
+  .sort-group select {
+    width: 100%;
   }
 }
+
