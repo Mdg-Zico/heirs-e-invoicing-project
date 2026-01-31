@@ -1,5 +1,14 @@
 import { transactions } from "../../../services/transactionMock";
+import publicTransport from "../../../assets/icons/publicTransport.svg";
+import groceryStore from "../../../assets/icons/groceryStore.svg"
+import publicTransport2 from "../../../assets/icons/publicTransport2.svg"
 import "../DashboardCards.css";
+
+const ICON_MAP = {
+  transport: publicTransport,
+  grocery: groceryStore,
+  transport2: publicTransport2
+};
 
 function Transactions() {
   return (
@@ -10,20 +19,21 @@ function Transactions() {
         {transactions.map(tx => (
           <div key={tx.id} className="transaction-item">
             <div className="transaction-left">
-              <span className="transaction-icon">{tx.icon}</span>
+              <img
+                src={ICON_MAP[tx.type]}
+                alt={tx.title}
+                className="transaction-icon"
+              />
               <div>
                 <p className="transaction-title">{tx.title}</p>
                 <span className="transaction-date">{tx.date}</span>
               </div>
             </div>
-
-            {/*<span className="transaction-amount">{tx.amount}</span>*/}
           </div>
         ))}
       </div>
 
-      {/*<div className="view-all">View all →</div>*/}
-       <div className="transaction-footer">
+      <div className="transaction-footer">
         <a href="#">View all →</a>
       </div>
     </div>

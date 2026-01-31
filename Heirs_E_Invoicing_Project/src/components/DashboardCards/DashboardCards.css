@@ -1,115 +1,159 @@
 .chart-card {
   padding: 24px;
- 
+  align-items: flex-start;
 }
+
 
 .chart-header {
   display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.chart-header-top {
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 16px;
+}
+
+.chart-icon {
+  width: 33px;
+  height: 33px;
+  background-color: #F4F7FE;
+  border-radius: 7px;
 }
 
 .chart-header h3 {
-  font-size: 16px;
-  color: #2B3674;
-  margin: 0;
+  font-size: 14px;
+  color: #A3AED0;
+  font-family: "DM Sans";
+  font-weight: 500;
+  margin-bottom: 2.02px;
 }
-
 .chart-amount {
-  font-size: 20px;
+  font-size: 34px;
   font-weight: 700;
-  color: #2B3674;
+  color: #1B2559;
 }
 .profile-card {
   text-align: center;
   padding: 24px;
-  height: 350px ;
+
+  
+  
   
 }
-
+.profile-info{
+   text-align: center;
+}
 .profile-avatar {
-  width: 80px;
-  height: 80px;
+  width: 127px;
+  height: 130px;
   border-radius: 50%;
   margin-bottom: 12px;
 }
 
 .profile-name {
-  font-size: 16px;
+  font-size: 24px;
+  height: 32px;
   font-weight: 700;
-  color: #2B3674;
+  color: #1B2559;
   margin: 0;
+  
 }
 
 .profile-location {
-  font-size: 12px;
+  font-size: 14px;
   color: #A3AED0;
-  margin-bottom: 16px;
+  margin-bottom: 34px;
+  display: flex;
+  align-items: center;    
+  justify-content: center;
+  font-weight: 500;
+  
+ 
 }
-
+.profile-location img{
+    margin-right: 7px;
+}
 .profile-stats {
   display: flex;
   justify-content: space-between;
   margin-top: 16px;
+   margin-left: 60px;
+  
+   justify-content: center;
+   text-align: center;
+
+ 
 }
 
 .profile-stat {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  
+ margin-right: 42px;
 }
 
 .stat-number {
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 700;
   color: #2B3674;
 }
 
 .stat-label {
-  font-size: 12px;
+  font-size: 14px;
   color: #A3AED0;
+  font-weight: 400;
+  
 }
+
 .transactions-card h3 {
-  margin: 22px 0 16px 0;
-  color: #2B3674;
+  margin: 0 0 19px 0;
+  color: #1B2559;
+  font-weight: 700;
 }
 
 .transactions-list {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 31px;
 }
 
 .transaction-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
+ 
 }
 
 .transaction-left {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 16px;
+
 }
 
 .transaction-icon {
   font-size: 20px;
+  width: 44px;
+  height: 44px;
 }
 
 .transaction-title {
-  font-size: 14px;
+  font-size: 16px;
   margin: 0;
+  font-weight: 700;
 }
 
 .transaction-date {
   font-size: 12px;
   color: #A3AED0;
+  font-weight: 500;
 }
 
-.transaction-amount {
+/* .transaction-amount {
   font-weight: 600;
-}
+} */
 
 
 .schedule-card {
@@ -120,14 +164,16 @@
 
 .schedule-header h3 {
   font-size: 22px;
-  color: #2B3674;
-  margin-bottom: 16px;
+  color: #1B2559;
+  margin-bottom: 27px;
+  margin-top: 0;
 }
 
 .schedule-list {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 37px;
+  margin-top: 0;
 }
 
 .transactions-card,
@@ -140,25 +186,28 @@
   display: flex;
   align-items: flex-start;
   gap: 12px;
+ 
 }
 
 .schedule-line {
   width: 4px;
-  height: 36px;
-  background: #5B4BFF;
+  height: 41px;
+  background: #4318FF;
   border-radius: 2px;
+  
 }
 
 .schedule-title {
-  font-size: 14px;
-  font-weight: 600;
-  color: #2B3674;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1B2559;
   margin: 0;
 }
 
 .schedule-time {
   font-size: 12px;
   color: #A3AED0;
+  font-weight: 500;
 }
 
 .schedule-footer {
@@ -172,19 +221,28 @@
   margin-bottom: 0;
 }
 
-.schedule-footer .transaction-footer a {
-  color: #5B4BFF;
-  font-size: 13px;
-  text-decoration: none;
+.schedule-footer a,
+.transaction-footer a {
+  color: #4318FF;
+  font-size: 16px;
+    text-decoration: none;
+  font-weight: 700;
+  font-family: "DM sans";
 }
 
 
-
-
-
-
-
-
-
-
-
+@media (max-width: 400px){
+    .profile-stats{
+        margin-left: 40px;
+         gap: 10px;              /* replaces margins */
+        flex-wrap: wrap;  
+         min-width: 70px;   
+    }
+    .profile-location{
+        flex-wrap: wrap;
+    }
+    .profile-name{
+        word-break: break-word;
+        margin-bottom: 40px;
+    }
+}

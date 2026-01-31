@@ -37,6 +37,14 @@
   flex-direction: column;
   justify-content: center;
 }
+.header-text h2{
+    font-weight: 700;
+    size: 34px;
+    color: #2B3674;
+    max-width: 100%;
+    height: auto;
+}
+
 
 .greeting {
   color: #8F9BBA;
@@ -203,3 +211,7 @@
     width: 100%;
   }
 }
+
+
+
+

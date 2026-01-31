@@ -1,3 +1,4 @@
+/* ===== Layout ===== */
 .settings-main {
   padding: 32px;
   display: flex;
@@ -7,7 +8,7 @@
   font-family: "DM Sans";
 }
 
-
+/* ===== Header ===== */
 .settings-header h2 {
   font-size: 24px;
   color: #2B3674;
@@ -20,7 +21,7 @@
   margin-top: 4px;
 }
 
-
+/* ===== Card ===== */
 .settings-card {
   background: #ffffff;
   border-radius: 16px;
@@ -28,7 +29,7 @@
   margin-top: 24px;
 }
 
-
+/* ===== Tabs ===== */
 .settings-tabs {
   display: flex;
   gap: 12px;
@@ -36,8 +37,7 @@
   flex-wrap: wrap;
 }
 
-
-.settings-tabs .tab {
+.tab {
   background: #ffffff;
   border: 1px solid #E5E7EB;
   border-radius: 10px;
@@ -46,54 +46,58 @@
   cursor: pointer;
   color: #2B3674;
   font-family: "DM Sans";
-  transition: 0.2s ease;
-}
-
-.settings-tabs .tab:hover {
-  background: #F4F7FE;
-}
-
-.settings-tabs .tab.active {
-  background: #4318FF;
-  color: #ffffff;
-  border-color: #4318FF;
-}
-.tab {
-  background: #ffffff;
-  border: 1px solid #E5E7EB;
-  border-radius: 10px;
-  padding: 8px 18px;
-  font-size: 14px;
-  cursor: pointer;
-  color: #2B3674;
-  font-family: "DM Sans";
   transition: all 0.2s ease;
-  
+}
+
+.tab:hover {
+  background: #F4F7FE;
 }
 
 .tab.active {
   background: #4318FF;
   color: #ffffff;
-  border: none;              
+  border: none;
   box-shadow: 0 4px 12px rgba(67, 24, 255, 0.25);
 }
 
+/* ===== Content ===== */
 .settings-content {
-  margin-top: 8px;
-  border: none;
+  margin-top: 12px;
 }
 
-
-@media (max-width: 600px) {
-  .settings-tabs {
-    gap: 8px;
-    justify-content: flex-start;
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .settings-main {
+    padding: 16px;
   }
 
-  .settings-tabs .tab {
-    flex: 0 0 auto;   
-    width: auto;     
-    font-size: 13px;
+  .settings-card {
+    padding: 16px;
+  }
+
+  .settings-content {
+    margin-top: 16px;
+  }
+
+  /* stack form content */
+  .form-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .settings-tabs {
+    gap: 6px;
+  }
+
+  .tab {
     padding: 8px 12px;
+    font-size: 12px;
   }
 }

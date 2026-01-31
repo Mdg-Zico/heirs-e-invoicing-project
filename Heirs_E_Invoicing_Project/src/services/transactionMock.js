@@ -4,20 +4,21 @@ export const transactions = [
     title: "Public Transport",
     date: "22 September 2020",
     amount: "-$15.00",
-    icon: "🚇"
+    type: "transport"
   },
   {
     id: 2,
     title: "Grocery Store",
     date: "18 September 2020",
     amount: "-$75.20",
-    icon: "🛒"
+    type: "grocery"
   },
-  {
+
+   {
     id: 3,
     title: "Public Transport",
-    date: "16 September 2020",
-    amount: "-$15.00",
-    icon: "🚇"
+    date: "30 September 2020",
+    amount: "-$75.20",
+    type: "transport2"
   }
 ];

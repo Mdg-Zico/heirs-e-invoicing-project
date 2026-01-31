@@ -1,29 +1,31 @@
-import barIcon from "../../../assets/icons/bar_chart.svg"
-import waves from "../../../assets/icons/monthlySpendIcon.svg"
+import bar from "../../../assets/icons/bar.svg";
 import "../DashboardCards.css";
-import "./MonthlySpend.css"
+import "./MonthlySpend.css";
 
-
-function CurrentMonthEarnings() {
+function MonthlySpend() {
   return (
-   <div className="card monthly-card monthly-earnings-card">
-    <img src={barIcon} className="monthly-bar-icon"  />
-        <div className="monthly-header">
-            <p className="monthly-title">This month earnings</p>
-            
-            
+    <div className=" card monthly-card monthly-earnings-card monthly-spend-card">
 
-            <h3 className="monthly-value">$682.5</h3>
-            <span className="monthly-badge">+2.45%</span>
+      {/* Header content */}
+      <div className="monthly-header">
+        <div className="monthly-top-row">
+          <p className="monthly-title">Spent this month</p>
+          <span className="monthly-percent">+2.45%</span>
         </div>
-    
-  
-    <img className="svg" src={waves}  />
-    
-  
-</div>
 
+        <h3 className="monthly-value">$682.5</h3>
+
+        <div className="monthly-status">
+          <span className="status-check">✓</span>
+          <span>On track</span>
+        </div>
+      </div>
+
+      {/* Chart */}
+      <img src={bar} alt="" className="monthly-chart" />
+
+    </div>
   );
 }
 
-export default CurrentMonthEarnings;
+export default MonthlySpend;

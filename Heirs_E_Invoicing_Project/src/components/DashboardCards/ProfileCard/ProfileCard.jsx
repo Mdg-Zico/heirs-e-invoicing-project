@@ -16,16 +16,18 @@ function ProfileCard() {
 
       <div className="profile-stats">
         <div className="profile-stat">
-          <span className="stat-number">28</span>
           <span className="stat-label">Projects</span>
+          <span className="stat-number">28</span>
         </div>
         <div className="profile-stat">
-          <span className="stat-number">643</span>
+          
           <span className="stat-label">Followers</span>
+          <span className="stat-number">643</span>
         </div>
         <div className="profile-stat">
-          <span className="stat-number">76</span>
+          
           <span className="stat-label">Following</span>
+          <span className="stat-number">76</span>
         </div>
       </div>
     </div>

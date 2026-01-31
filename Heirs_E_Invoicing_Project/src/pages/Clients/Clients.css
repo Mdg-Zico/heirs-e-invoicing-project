@@ -151,3 +151,42 @@
   opacity: 0.5;
   cursor: not-allowed;
 }
+
+
+@media (max-width: 600px) {
+  .clients-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .clients-actions {
+    width: 100%;
+  }
+
+  .clients-search {
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .table-controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .sort-group {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .sort-group select {
+    flex: 1;
+    min-width: 140px;
+  }
+
+  .add-client-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
