@@ -65,7 +65,11 @@ Optimized for:
 
 
 ---
+## Demo Login Credentials
+Email: admin@mail.com  
+Password: admin123
 
+---
 ## 📦 Setup
 
 ```bash
