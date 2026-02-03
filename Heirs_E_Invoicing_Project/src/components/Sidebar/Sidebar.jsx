@@ -2,13 +2,13 @@
 import "./Sidebar.css"
 import Icon from "./icons/Icon.svg"
 import { NavLink } from "react-router-dom";
-import dashboardIcon from "./icons/dashboard.svg";
-import activityIcon from "./icons/activity.svg";
-import libraryIcon from "./icons/library.svg";
-import securityIcon from "./icons/security.svg";
-import schedulesIcon from "./icons/schedules.svg";
-import payoutsIcon from "./icons/payouts.svg";
-import settingsIcon from "./icons/settings.svg";
+import dashboardIcon from "./icons/Dashboard.svg";
+import activityIcon from "./icons/Activity.svg";
+import libraryIcon from "./icons/Library.svg";
+import securityIcon from "./icons/Security.svg";
+import schedulesIcon from "./icons/Schedules.svg";
+import payoutsIcon from "./icons/Payouts.svg";
+import settingsIcon from "./icons/Settings.svg";
 import logoutIcon from "./icons/Logout.svg"
 import clientIcon from "./icons/clientIcon.svg"
 
